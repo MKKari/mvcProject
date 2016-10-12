@@ -52,7 +52,7 @@ namespace TeamManagment.Controllers
             {
                 db.Players.Add(player);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("index", "teams", new { area = "" });
             }
 
             return View(player);

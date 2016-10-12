@@ -18,15 +18,6 @@ namespace TeamManagment
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            Team team = new Team();
-            team.Id = 5;
-            team.Name = "Barca";
-            team.Players = null;
-
-            using (var dbCtx = new ApplicationDbContext())
-            {
-                dbCtx.Teams.Add(team);
-            }
         }
     }
 }
